@@ -1,0 +1,771 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "rose nutrition",
+            "intents": [
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "LogFoodIntent",
+                    "slots": [
+                        {
+                            "name": "meal",
+                            "type": "MealTime",
+                            "samples": [
+                                "I would like to log {meal}",
+                                "{meal}",
+                                "I'd like to log {meal}"
+                            ]
+                        },
+                        {
+                            "name": "food",
+                            "type": "AMAZON.Food",
+                            "samples": [
+                                "{food}",
+                                "I had {food}"
+                            ]
+                        },
+                        {
+                            "name": "group",
+                            "type": "FoodGroup",
+                            "samples": [
+                                "it belongs to {group}",
+                                "{group}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "log a meal",
+                        "Store my meal",
+                        "Log my {meal}",
+                        "Log the meal I had",
+                        "Log my last meal"
+                    ]
+                },
+                {
+                    "name": "RecommendationIntent",
+                    "slots": [
+                        {
+                            "name": "mealtime",
+                            "type": "MealTime",
+                            "samples": [
+                                "Give me a {mealtime}",
+                                "{mealtime}",
+                                "I would like a {mealtime}"
+                            ]
+                        },
+                        {
+                            "name": "type",
+                            "type": "MealType",
+                            "samples": [
+                                "{type}",
+                                "{type} {mealtime}",
+                                "Give me a {type} {mealtime}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "What should I have for {mealtime}",
+                        "Give me an idea for {mealtime}",
+                        "Recommend a meal",
+                        "Find me a meal",
+                        "Give me a {mealtime}",
+                        "Give me a {type} {mealtime}"
+                    ]
+                },
+                {
+                    "name": "GetMealIntent",
+                    "slots": [
+                        {
+                            "name": "mealtime",
+                            "type": "MealTime",
+                            "samples": [
+                                "{mealtime}"
+                            ]
+                        },
+                        {
+                            "name": "day",
+                            "type": "days",
+                            "samples": [
+                                "the {day}",
+                                "{day}"
+                            ]
+                        },
+                        {
+                            "name": "month",
+                            "type": "AMAZON.Month",
+                            "samples": [
+                                "it was {month}",
+                                "{month}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Get my {mealtime} from the {day} of {month}",
+                        "What did I have for {mealtime} on the {day} of {month}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "MealTime",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "breakfast",
+                                "synonyms": [
+                                    "brekky",
+                                    "my first meal"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lunch",
+                                "synonyms": [
+                                    "my second meal"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dinner",
+                                "synonyms": [
+                                    "tea",
+                                    "my third meal",
+                                    "din dins"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MealType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "sweet"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "savoury"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "days",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "thirty first",
+                                "synonyms": [
+                                    "thirty one",
+                                    "31",
+                                    "31st"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "thirtieth",
+                                "synonyms": [
+                                    "thirty",
+                                    "30",
+                                    "30th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "twenty ninth",
+                                "synonyms": [
+                                    "twenty nine",
+                                    "29",
+                                    "29th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "twenty eighth",
+                                "synonyms": [
+                                    "twenty eight",
+                                    "28",
+                                    "28th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "twenty seventh",
+                                "synonyms": [
+                                    "twenty seven",
+                                    "27",
+                                    "27th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "twenty sixth",
+                                "synonyms": [
+                                    "twenty six",
+                                    "26",
+                                    "26th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "twenty fifth",
+                                "synonyms": [
+                                    "twenty five",
+                                    "25",
+                                    "25th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "twenty fourth",
+                                "synonyms": [
+                                    "twenty four",
+                                    "24",
+                                    "24th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "twenty third",
+                                "synonyms": [
+                                    "twenty three",
+                                    "23",
+                                    "23rd"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "twenty second",
+                                "synonyms": [
+                                    "twenty two",
+                                    "22",
+                                    "22nd"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "twenty first",
+                                "synonyms": [
+                                    "twenty one",
+                                    "21",
+                                    "21st"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "twentieth",
+                                "synonyms": [
+                                    "twenty",
+                                    "20",
+                                    "20th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nineteenth",
+                                "synonyms": [
+                                    "nineteen",
+                                    "19",
+                                    "19th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "eighteenth",
+                                "synonyms": [
+                                    "eighteen",
+                                    "18",
+                                    "18th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "seventeenth",
+                                "synonyms": [
+                                    "seventeen",
+                                    "17",
+                                    "17th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sixteenth",
+                                "synonyms": [
+                                    "sixteen",
+                                    "16",
+                                    "16th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fifteenth",
+                                "synonyms": [
+                                    "fifteen",
+                                    "15",
+                                    "15th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fourteenth",
+                                "synonyms": [
+                                    "fourteen",
+                                    "14",
+                                    "14th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "thirteenth",
+                                "synonyms": [
+                                    "thirteen",
+                                    "13",
+                                    "13th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "twelfth",
+                                "synonyms": [
+                                    "twelve",
+                                    "12",
+                                    "12th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "eleventh",
+                                "synonyms": [
+                                    "eleven",
+                                    "11",
+                                    "11th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tenth",
+                                "synonyms": [
+                                    "ten",
+                                    "10",
+                                    "10th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ninth",
+                                "synonyms": [
+                                    "nine",
+                                    "9",
+                                    "9th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "eighth",
+                                "synonyms": [
+                                    "eight",
+                                    "8",
+                                    "8th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "seventh",
+                                "synonyms": [
+                                    "seven",
+                                    "7",
+                                    "7th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sixth",
+                                "synonyms": [
+                                    "six",
+                                    "6",
+                                    "6th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fifth",
+                                "synonyms": [
+                                    "five",
+                                    "5",
+                                    "5th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fourth",
+                                "synonyms": [
+                                    "four",
+                                    "4",
+                                    "4th"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "third",
+                                "synonyms": [
+                                    "three",
+                                    "3",
+                                    "3rd"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "second",
+                                "synonyms": [
+                                    "two",
+                                    "2",
+                                    "2nd"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "first",
+                                "synonyms": [
+                                    "one",
+                                    "1",
+                                    "1st"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FoodGroup",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "oils"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "grains"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dairy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "protein"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "vegetables"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fruit"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "RecommendationIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "mealtime",
+                            "type": "MealTime",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1387141618717.612152692012"
+                            }
+                        },
+                        {
+                            "name": "type",
+                            "type": "MealType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1387141618717.539123916687"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LogFoodIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "meal",
+                            "type": "MealTime",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1029991886944.1291663390766"
+                            }
+                        },
+                        {
+                            "name": "food",
+                            "type": "AMAZON.Food",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1029991886944.403006014351"
+                            }
+                        },
+                        {
+                            "name": "group",
+                            "type": "FoodGroup",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1312731539860.452249010492"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "GetMealIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "mealtime",
+                            "type": "MealTime",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.670769356928.306813686873"
+                            }
+                        },
+                        {
+                            "name": "day",
+                            "type": "days",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.670769356928.1114358269270"
+                            }
+                        },
+                        {
+                            "name": "month",
+                            "type": "AMAZON.Month",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.791566431387.438344051006"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1387141618717.612152692012",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What time would you like your meal. You can say breakfast, lunch or dinner"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1387141618717.539123916687",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What type of meal would you like. You can say sweet or savoury"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1387141618717.539123916687",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You said {type} , correct?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "So you're looking for a {type} meal , right?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1387141618717",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "So you want a {type} {mealtime} , right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1029991886944.403006014351",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What did you have for {meal} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1029991886944.403006014351",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You had {food} , correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1029991886944.1291663390766",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What meal would you like to log?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1029991886944.1291663390766",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You want to log {meal} , right?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1029991886944",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "So you had {food} for {meal} , correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1387141618717.612152692012",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "So you want a {mealtime} , correct?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "You said {mealtime} , right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.670769356928.306813686873",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What meal do you want me to get"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.670769356928.1114358269270",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What day was the meal you want me to get"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.670769356928.1524343120880",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What month was the meal you want me to get"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.791566431387.438344051006",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What month was the meal you want me to get"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1312731539860.452249010492",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What group does this meal belong to. You can say fruit, vegetables, protein, dairy, grains or oils"
+                    }
+                ]
+            }
+        ]
+    }
+}
